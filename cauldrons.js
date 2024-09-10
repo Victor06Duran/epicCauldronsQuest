@@ -1012,7 +1012,10 @@ const data = {
 }
 
 
+console.log("###############################################################################################################");
+
 // 1.- Mostrar la cantidad total de cauldrons
+console.log("// 1.- Mostrar la cantidad total de cauldrons");
 
 let cauldronQty = 0;
 
@@ -1027,6 +1030,7 @@ console.log("Total Nº of cauldrons: " + cauldronQty);
 console.log();
 
 // 2- Mostrar la cantidad de cauldrons separados por temporada
+console.log("// 2- Mostrar la cantidad de cauldrons separados por temporada");
 
 let winterCauldron = 0;
 let autumnCauldron = 0;
@@ -1056,6 +1060,7 @@ console.log();
 
 
 // 3.- Mostrar la cantidad de Cauldrons rotos agrupados por temporada
+console.log("// 3.- Mostrar la cantidad de Cauldrons rotos agrupados por temporada");
 
 let brokenWinterCauldron = 0;
 let brokenAutumnCauldron = 0;
@@ -1099,6 +1104,8 @@ console.log();
 
 
 // 4.- Mostrar el color de los cauldron con magic_description "Naproxen"
+console.log("// 4.- Mostrar el color de los cauldron con magic_description Naproxen");
+
 
 for (const i in data.cauldrons.winter_seasson){
 
@@ -1131,6 +1138,9 @@ console.log();
 
 
 // 5.- Mostrar el total de cauldrons de madera "Wood" rotos, suma de todas las temporadas
+
+console.log("// 5.- Mostrar el total de cauldrons de madera Wood rotos, suma de todas las temporadas");
+
 
 let brokenWoodenWinterCauldron = 0;
 let brokenWoodenAutumnCauldron = 0;
@@ -1173,6 +1183,9 @@ console.log();
 
 // 6.- Mostrar la Id y magic_description de los cauldron llamados "Brassicaceae"
 
+console.log("// 6.- Mostrar la Id y magic_description de los cauldron llamados Brassicaceae");
+
+
 for (const i in data.cauldrons.winter_seasson){
 
     if ((data.cauldrons.winter_seasson[i].name === "Brassicaceae")) {
@@ -1210,6 +1223,8 @@ console.log();
 
 // 7.- Mostrar el porcentaje de cauldrons dañados separados por temporada
 
+console.log("// 7.- Mostrar el porcentaje de cauldrons dañados separados por temporada");
+
 let PercentageBrokenWinterCauldrons = Math.round((brokenWinterCauldron * 100)/winterCauldron)
 let PercentageBrokenAutumnCauldrons = Math.round((brokenAutumnCauldron * 100)/autumnCauldron)
 let PercentageBrokenSpringCauldrons = Math.round((brokenSpringCauldron * 100)/springCauldron)
@@ -1225,7 +1240,10 @@ console.log();
 
 // 8.- Mostrar el porcentaje de cauldrons de "Plexiglass" en "winter_seasson"
 
-let plexiglassWinterCauldrons               = 0;
+console.log("// 8.- Mostrar el porcentaje de cauldrons de Plexiglass en winter_seasson");
+
+
+let plexiglassWinterCauldrons = 0;
 
 
 for (const i in data.cauldrons.winter_seasson){
@@ -1242,6 +1260,9 @@ console.log();
 
 
 // 9.- Mostrar el número de cauldrons de color "Orange" en buen estado
+
+console.log("// 9.- Mostrar el número de cauldrons de color Orange en buen estado");
+
 
 let numberOfOrangeCauldronsInGoodCondition = 0;
 
@@ -1277,6 +1298,34 @@ for (const i in data.cauldrons.summer_seasson){
 console.log("Nº of Orange Cauldrons in good condition: " + numberOfOrangeCauldronsInGoodCondition);
 console.log();
 
-// 10.- Mostrar el listado de posibles colores de cauldrons, sin repetir color.
+// 10.- Mostrar el listado de posibles colores de cauldrons, sin repetir color. 
+console.log("// 10.- Mostrar el listado de posibles colores de cauldrons, sin repetir color.");
+
+ let availableColorList = [];
+ for (const i in data.cauldrons.winter_seasson){
+    if (!availableColorList.includes(data.cauldrons.winter_seasson[i].color)) {
+        availableColorList.push(data.cauldrons.winter_seasson[i].color);
+    }
+ }
+ for (const i in data.cauldrons.autumn_seasson){
+    if (!availableColorList.includes(data.cauldrons.autumn_seasson[i].color)) {
+        availableColorList.push(data.cauldrons.autumn_seasson[i].color);
+    }
+ }
+ for (const i in data.cauldrons.spring_seasson){
+    if (!availableColorList.includes(data.cauldrons.spring_seasson[i].color)) {
+        availableColorList.push(data.cauldrons.spring_seasson[i].color);
+    }
+ }
+ for (const i in data.cauldrons.summer_seasson){
+    if (!availableColorList.includes(data.cauldrons.summer_seasson[i].color)) {
+        availableColorList.push(data.cauldrons.summer_seasson[i].color);
+    }
+ }
+ console.log("List of all available Colors: " + availableColorList);
+ 
+  
+ console.log("###############################################################################################################");
 
 
+ 
