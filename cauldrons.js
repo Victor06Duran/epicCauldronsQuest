@@ -1028,17 +1028,58 @@ console.log();
 
 // 2- Mostrar la cantidad de cauldrons separados por temporada
 
-console.log("Cantidad Otoño: " + (data.cauldrons.autumn_seasson.length));
+console.log("Nº of Autumn Cauldrons: " + (data.cauldrons.autumn_seasson.length));
 
-console.log("Cantidad Invierno: " + (data.cauldrons.winter_seasson.length));
+console.log("Nº of Winter Cauldrons: " + (data.cauldrons.winter_seasson.length));
 
-console.log("Cantidad Verano: " + (data.cauldrons.summer_seasson.length));
+console.log("Nº of Spring Cauldrons: " + (data.cauldrons.spring_seasson.length));
 
-console.log("Cantidad Primavera: " + (data.cauldrons.spring_seasson.length));
+console.log("Nº of Summer Cauldrons: " + (data.cauldrons.summer_seasson.length));
 
 console.log();
 
 // 3.- Mostrar la cantidad de Cauldrons rotos agrupados por temporada
+
+let brokenWinterCauldron = 0;
+let brokenAutumnCauldron = 0;
+let brokenSpringCauldron = 0;
+let brokenSummerCauldron = 0;
+
+for (const i in data.cauldrons.winter_seasson){
+
+    if (data.cauldrons.winter_seasson[i].damaged === true) {
+        brokenWinterCauldron++;
+    }
+}
+
+for (const i in data.cauldrons.autumn_seasson){
+
+    if (data.cauldrons.autumn_seasson[i].damaged === true) {
+        brokenAutumnCauldron++;
+    }
+} 
+
+for (const i in data.cauldrons.spring_seasson){
+
+    if (data.cauldrons.spring_seasson[i].damaged === true) {
+        brokenSpringCauldron++;
+    }
+} 
+
+for (const i in data.cauldrons.summer_seasson){
+
+    if (data.cauldrons.summer_seasson[i].damaged === true) {
+        brokenSummerCauldron++;
+    }
+} 
+
+console.log("Broken Winter Cauldrons: " + brokenWinterCauldron);
+console.log("Broken Winter Cauldrons: " + brokenAutumnCauldron);
+console.log("Broken Winter Cauldrons: " + brokenSpringCauldron);
+console.log("Broken Winter Cauldrons: " + brokenSummerCauldron);
+
+console.log();
+
 
 // 4.- Mostrar el color de los cauldron con magic_description "Naproxen"
 
