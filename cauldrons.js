@@ -1014,21 +1014,18 @@ const data = {
 
 // 1.- Mostrar la cantidad total de cauldrons
 
-    // let cauldronsTotalQty = 0;
+let cauldronQty = 0;
 
-    // for (let i = 0; i < data.cauldrons.winter_seasson.length; i++) {        
-    //     cauldronsTotalQty++;
-        
-    // }
-    // console.log("Cantidad Total: " + cauldronsTotalQty);
+for (const i in data.cauldrons){
 
-    for (const cauldron in data.cauldrons.length) {
-        console.log("Total: "+ (`${cauldron}: ${data.cauldrons.length[cauldron]}`));
-      }
+    cauldronQty += data.cauldrons[i].length;
+
+} 
+
+console.log("Total cauldron quantity: " + cauldronQty);
 
 
 // 2- Mostrar la cantidad de cauldrons separados por temporada
-
 
 
 // 3.- Mostrar la cantidad de Cauldrons rotos agrupados por temporada
@@ -1046,3 +1043,5 @@ const data = {
 // 9.- Mostrar el número de cauldrons de color "Orange" en buen estado
 
 // 10.- Mostrar el listado de posibles colores de cauldrons, sin repetir color.
+
+
