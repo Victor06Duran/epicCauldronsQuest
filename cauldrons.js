@@ -1028,15 +1028,32 @@ console.log();
 
 // 2- Mostrar la cantidad de cauldrons separados por temporada
 
-console.log("Nº of Autumn Cauldrons: " + (data.cauldrons.autumn_seasson.length));
+let winterCauldron = 0;
+let autumnCauldron = 0;
+let springCauldron = 0;
+let summerCauldron = 0;
 
-console.log("Nº of Winter Cauldrons: " + (data.cauldrons.winter_seasson.length));
+for (let i = 0; i < data.cauldrons.winter_seasson.length; i++) {
+    winterCauldron++;
+}
+for (let i = 0; i < data.cauldrons.autumn_seasson.length; i++) {
+    autumnCauldron++;
+}for (let i = 0; i < data.cauldrons.spring_seasson.length; i++) {
+    springCauldron++;
+}for (let i = 0; i < data.cauldrons.summer_seasson.length; i++) {
+    summerCauldron++;
+}
 
-console.log("Nº of Spring Cauldrons: " + (data.cauldrons.spring_seasson.length));
+console.log("Nº of Winter Cauldrons: " + (winterCauldron));
 
-console.log("Nº of Summer Cauldrons: " + (data.cauldrons.summer_seasson.length));
+console.log("Nº of Autumn Cauldrons: " + (autumnCauldron));
+
+console.log("Nº of Spring Cauldrons: " + (springCauldron));
+
+console.log("Nº of Summer Cauldrons: " + (summerCauldron));
 
 console.log();
+
 
 // 3.- Mostrar la cantidad de Cauldrons rotos agrupados por temporada
 
