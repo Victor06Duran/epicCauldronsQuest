@@ -1167,8 +1167,42 @@ console.log("Nº of broken wooden Winter Cauldrons: " + brokenWoodenWinterCauldr
 console.log("Nº of broken wooden Autumn Cauldron:s " + brokenWoodenAutumnCauldron);
 console.log("Nº of broken wooden Spring Cauldrons: " + brokenWoodenSpringCauldron);
 console.log("Nº of broken wooden Summer Cauldrons: " + brokenWoodenSummerCauldron);
+console.log();
+
 
 // 6.- Mostrar la Id y magic_description de los cauldron llamados "Brassicaceae"
+
+for (const i in data.cauldrons.winter_seasson){
+
+    if ((data.cauldrons.winter_seasson[i].name === "Brassicaceae")) {
+        console.log("ID: " + data.cauldrons.winter_seasson[i].id + " - " + "Magic Description: " + data.cauldrons.winter_seasson[i].magic_description);
+
+    }
+}
+
+for (const i in data.cauldrons.autumn_seasson){
+
+    if ((data.cauldrons.autumn_seasson[i].name === "Brassicaceae")) {
+        console.log("ID: " + data.cauldrons.autumn_seasson[i].id + " - " + "Magic Description: " + data.cauldrons.autumn_seasson[i].magic_description);
+
+    }
+} 
+
+for (const i in data.cauldrons.spring_seasson){
+
+    if ((data.cauldrons.spring_seasson[i].name === "Brassicaceae")) {
+        console.log("ID: " + data.cauldrons.spring_seasson[i].id + " - " + "Magic Description: " + data.cauldrons.spring_seasson[i].magic_description);
+
+    }
+} 
+
+for (const i in data.cauldrons.summer_seasson){
+
+    if ((data.cauldrons.summer_seasson[i].name === "Brassicaceae")) {
+        console.log("ID: " + data.cauldrons.summer_seasson[i].id + " - " + "Magic Description: " + data.cauldrons.summer_seasson[i].magic_description);
+
+    }
+} 
 
 // 7.- Mostrar el porcentaje de cauldrons dañados separados por temporada
 
