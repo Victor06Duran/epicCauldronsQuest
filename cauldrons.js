@@ -1130,6 +1130,44 @@ for (const i in data.cauldrons.summer_seasson){
 
 // 5.- Mostrar el total de cauldrons de madera "Wood" rotos, suma de todas las temporadas
 
+let brokenWoodenWinterCauldron = 0;
+let brokenWoodenAutumnCauldron = 0;
+let brokenWoodenSpringCauldron = 0;
+let brokenWoodenSummerCauldron = 0;
+
+for (const i in data.cauldrons.winter_seasson){
+
+    if ((data.cauldrons.winter_seasson[i].type === "Wood")&&(data.cauldrons.winter_seasson[i].damaged === true)) {
+        brokenWoodenWinterCauldron++;
+    }
+}
+
+for (const i in data.cauldrons.autumn_seasson){
+
+    if ((data.cauldrons.autumn_seasson[i].type === "Wood")&&(data.cauldrons.autumn_seasson[i].damaged === true)) {
+        brokenWoodenAutumnCauldron++;
+    }
+} 
+
+for (const i in data.cauldrons.spring_seasson){
+
+    if ((data.cauldrons.spring_seasson[i].type === "Wood")&&(data.cauldrons.spring_seasson[i].damaged === true)) {
+        brokenWoodenSpringCauldron++;
+    }
+} 
+
+for (const i in data.cauldrons.summer_seasson){
+
+    if ((data.cauldrons.summer_seasson[i].type === "Wood")&&(data.cauldrons.summer_seasson[i].damaged === true)) {
+        brokenWoodenSummerCauldron++;
+    }
+} 
+
+console.log("Nº of broken wooden Winter Cauldrons: " + brokenWoodenWinterCauldron);
+console.log("Nº of broken wooden Autumn Cauldron:s " + brokenWoodenAutumnCauldron);
+console.log("Nº of broken wooden Spring Cauldrons: " + brokenWoodenSpringCauldron);
+console.log("Nº of broken wooden Summer Cauldrons: " + brokenWoodenSummerCauldron);
+
 // 6.- Mostrar la Id y magic_description de los cauldron llamados "Brassicaceae"
 
 // 7.- Mostrar el porcentaje de cauldrons dañados separados por temporada
