@@ -1100,6 +1100,34 @@ console.log();
 
 // 4.- Mostrar el color de los cauldron con magic_description "Naproxen"
 
+for (const i in data.cauldrons.winter_seasson){
+
+    if (data.cauldrons.winter_seasson[i].magic_description === "Naproxen") {
+        console.log("Color of the Naxopren Winter Cauldron: " + data.cauldrons.winter_seasson[i].color);
+    }
+}
+
+for (const i in data.cauldrons.autumn_seasson){
+
+    if (data.cauldrons.autumn_seasson[i].magic_description === "Naproxen") {
+        console.log("Color of the Naxopren Autumn Cauldron: " + data.cauldrons.autumn_seasson[i].color);
+    }
+} 
+
+for (const i in data.cauldrons.spring_seasson){
+
+    if (data.cauldrons.spring_seasson[i].magic_description === "Naproxen") {
+        console.log("Color of the Naxopren Spring Cauldron: " + data.cauldrons.spring_seasson[i].color);
+    }
+} 
+
+for (const i in data.cauldrons.summer_seasson){
+
+    if (data.cauldrons.summer_seasson[i].magic_description === "Naproxen") {
+        console.log("Color of the Naxopren Summer Cauldron: " + data.cauldrons.summer_seasson[i].color);
+    }
+} 
+
 // 5.- Mostrar el total de cauldrons de madera "Wood" rotos, suma de todas las temporadas
 
 // 6.- Mostrar la Id y magic_description de los cauldron llamados "Brassicaceae"
