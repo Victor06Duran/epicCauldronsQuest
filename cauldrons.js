@@ -1024,9 +1024,19 @@ for (const i in data.cauldrons){
 
 console.log("Total cauldron quantity: " + cauldronQty);
 
+console.log();
 
 // 2- Mostrar la cantidad de cauldrons separados por temporada
 
+console.log("Cantidad Otoño: " + (data.cauldrons.autumn_seasson.length));
+
+console.log("Cantidad Invierno: " + (data.cauldrons.winter_seasson.length));
+
+console.log("Cantidad Verano: " + (data.cauldrons.summer_seasson.length));
+
+console.log("Cantidad Primavera: " + (data.cauldrons.spring_seasson.length));
+
+console.log();
 
 // 3.- Mostrar la cantidad de Cauldrons rotos agrupados por temporada
 
