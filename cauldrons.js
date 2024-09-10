@@ -1220,9 +1220,26 @@ console.log("% of broken Winter Cauldrons: " + PercentageBrokenWinterCauldrons +
 console.log("% of broken Autumn Cauldrons: " + PercentageBrokenAutumnCauldrons + "%");
 console.log("% of broken Spring Cauldrons: " + PercentageBrokenSpringCauldrons + "%");
 console.log("% of broken Summer Cauldrons: " + PercentageBrokenSummerCauldrons + "%");
+console.log();
 
 
 // 8.- Mostrar el porcentaje de cauldrons de "Plexiglass" en "winter_seasson"
+
+let plexiglassWinterCauldrons               = 0;
+
+
+for (const i in data.cauldrons.winter_seasson){
+
+    if ((data.cauldrons.winter_seasson[i].type === "Plexiglass")) {
+        plexiglassWinterCauldrons++;
+    }
+}
+
+let PercentageOfPlexiglassWinterCauldrons   = Math.round((plexiglassWinterCauldrons * 100)/winterCauldron);
+
+console.log("% of Plexiglass Winter Cauldrons: " + PercentageOfPlexiglassWinterCauldrons + "%");
+console.log();
+
 
 // 9.- Mostrar el número de cauldrons de color "Orange" en buen estado
 
