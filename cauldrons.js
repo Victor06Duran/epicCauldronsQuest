@@ -1022,7 +1022,7 @@ for (const i in data.cauldrons){
 
 } 
 
-console.log("Total cauldron quantity: " + cauldronQty);
+console.log("Total Nº of cauldrons: " + cauldronQty);
 
 console.log();
 
@@ -1127,6 +1127,8 @@ for (const i in data.cauldrons.summer_seasson){
         console.log("Color of the Naxopren Summer Cauldron: " + data.cauldrons.summer_seasson[i].color);
     }
 } 
+console.log();
+
 
 // 5.- Mostrar el total de cauldrons de madera "Wood" rotos, suma de todas las temporadas
 
@@ -1169,7 +1171,6 @@ console.log("Nº of broken wooden Spring Cauldrons: " + brokenWoodenSpringCauldr
 console.log("Nº of broken wooden Summer Cauldrons: " + brokenWoodenSummerCauldron);
 console.log();
 
-
 // 6.- Mostrar la Id y magic_description de los cauldron llamados "Brassicaceae"
 
 for (const i in data.cauldrons.winter_seasson){
@@ -1204,7 +1205,22 @@ for (const i in data.cauldrons.summer_seasson){
     }
 } 
 
+console.log();
+
+
 // 7.- Mostrar el porcentaje de cauldrons dañados separados por temporada
+
+let PercentageBrokenWinterCauldrons = Math.round((brokenWinterCauldron * 100)/winterCauldron)
+let PercentageBrokenAutumnCauldrons = Math.round((brokenAutumnCauldron * 100)/autumnCauldron)
+let PercentageBrokenSpringCauldrons = Math.round((brokenSpringCauldron * 100)/springCauldron)
+let PercentageBrokenSummerCauldrons = Math.round((brokenSummerCauldron * 100)/summerCauldron)
+
+
+console.log("% of broken Winter Cauldrons: " + PercentageBrokenWinterCauldrons + "%");
+console.log("% of broken Autumn Cauldrons: " + PercentageBrokenAutumnCauldrons + "%");
+console.log("% of broken Spring Cauldrons: " + PercentageBrokenSpringCauldrons + "%");
+console.log("% of broken Summer Cauldrons: " + PercentageBrokenSummerCauldrons + "%");
+
 
 // 8.- Mostrar el porcentaje de cauldrons de "Plexiglass" en "winter_seasson"
 
